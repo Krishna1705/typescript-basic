@@ -1,7 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import InputField from './components/InputField';
 let name:string;
 
 //if we want to give any type to the variable then we can use any or unknown as follow,buit unknown is a recommanded way than making use of any
@@ -105,10 +104,11 @@ let printName2:(name2:string)=>void;//if function returns nothing then write voi
 
 
 
-function App() {
+const App:React.FC=()=> {
   return (
     <div className="App">
-   Hello world, {person.name}
+       <span className='heading'> TASKIFY </span>
+ <InputField/> 
     </div>
   );
 }
