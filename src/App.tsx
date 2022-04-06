@@ -1,6 +1,8 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './App.css';
 import InputField from './components/InputField';
+import {Todo} from './model'
+//**************************************************************************************************************************** */
 let name:string;
 
 //if we want to give any type to the variable then we can use any or unknown as follow,buit unknown is a recommanded way than making use of any
@@ -93,7 +95,7 @@ let lotsOfPeople: Person[]
 //******************************declaration of function in Typescript
 //1st way
 function printName1(name1:string){
-  console.log("************************",name1)
+  //console.log("************************",name1)
 }
 printName1("kaju");
 
@@ -105,10 +107,29 @@ let printName2:(name2:string)=>void;//if function returns nothing then write voi
 
 
 const App:React.FC=()=> {
+  const [todo,setTodo]=useState<string>("");
+  const [todos,setTodos]=useState<Todo[]>([]);
+  console.log(">>>>>>>>>>",todo);
+
+  const handleAdd=(e: React.FormEvent)=>{
+    e.preventDefault();
+    if(todo){
+      setTodos([...todos,{id:Date.now(),todo,isDone:false}])
+    }
+  }
+  console.log(">>>>>>>>>>",todos);
   return (
     <div className="App">
        <span className='heading'> TASKIFY </span>
- <InputField/> 
+       <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} /> 
+       {todos.map((i)=>(
+       <>
+       <li>
+       {i.todo}
+       </li>
+        
+       </>)
+       )}
     </div>
   );
 }
