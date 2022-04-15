@@ -1,0 +1,21 @@
+.toods_single{
+display: flex;
+width:29.5%;
+border-radius: 5px;
+padding: 20px;
+margin-top: 15px;
+background-color: bisque;
+flex-wrap: wrap;
+}
+.todos_single--text{
+    flex:1;
+}
+.todos_single--text:focus{
+    outline:none;
+}
+.icons{
+    margin-left: 10px;
+    font-size: 15px;
+    cursor: pointer;
+  
+}
