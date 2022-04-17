@@ -16,6 +16,26 @@ flex-wrap: wrap;
 .icons{
     margin-left: 10px;
     font-size: 15px;
-    cursor: pointer;
+    cursor: pointer; 
+}
+
+/* for desktop size */
+@media screen and (min-width:1024px){
+    .toods_single {
+        width: 29.5%;
+      }
+}
   
+
+/* for tablet size */
+@media screen and (min-width:768px) and (max-width:1023px){
+    .toods_single {
+        width: 40%;
+      }
+} 
+/* for smartphone size */
+@media screen and (max-width:767px){
+    .toods_single {
+        width: 100%;
+      }
 }
