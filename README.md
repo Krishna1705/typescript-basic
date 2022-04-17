@@ -1,1 +1,1 @@
-This is Typescript basic project which indludes concepts like how to implement React-Typescript project. I have developed basic Todo list app using Typescipt concepts
+This is Typescript basic project which indludes concepts like how to implement React-Typescript project. I have developed basic Todo list app which include understanding of how to make use of useEffect,useState and useRef hooks in Typescipt.
