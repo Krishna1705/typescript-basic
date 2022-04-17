@@ -9,11 +9,17 @@ flex-wrap: wrap;
 }
 .todos_single--text{
     flex:1;
+  
 }
-.todos_single--text:focus{
+/* .todos_single--text:focus{
+    outline:none;
+} */
+input:focus{
+    border: 0px solid;
     outline:none;
 }
-.icons{
+
+.icon{
     margin-left: 10px;
     font-size: 15px;
     cursor: pointer; 
